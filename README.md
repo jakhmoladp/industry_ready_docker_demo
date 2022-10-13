@@ -117,6 +117,28 @@ docker pull command will download the latest image of 'hello-world' official ima
 ## Assignment 3:
 Create a hello world fastapi application. Create a Dockerfile for your fastapi hello world application. Build Docker image using Docker file. Run docker image build in previous step. Push your Docker image to Docker Hub.
 
+- Create a hello word fastapi:
+
+![image](https://user-images.githubusercontent.com/54409180/195567173-fe36b726-a044-4109-bfc4-e21ae21847f2.png)
+
+- Create a Dockefile:
+
+![image](https://user-images.githubusercontent.com/54409180/195567299-b12ac936-8c50-4948-a880-91a14991e9d7.png)
+
+- Building a docker image:
+
+![image](https://user-images.githubusercontent.com/54409180/195567443-718cbc63-a73f-4a0e-b6db-7c94914eb80b.png)
+
+- Running the container for this image:
+
+![image](https://user-images.githubusercontent.com/54409180/195568062-658029f5-7e6d-4d70-a7e3-2d37c2b32eb4.png)
+![image](https://user-images.githubusercontent.com/54409180/195568212-e9fbbc68-85a6-4fa4-b102-30f25dac2d8a.png)
+
+- Pushing the docker image to Docker hub:
+
+![image](https://user-images.githubusercontent.com/54409180/195568388-0b904a65-44ab-405c-a37c-69270b4b2744.png)
+![image](https://user-images.githubusercontent.com/54409180/195568523-67c4e726-f652-482a-84ee-d33ddbfd2c77.png)
+
 --------------------------------------------------------------------------------------------------------
 ## Assignment 4:
 Automate Assignment below task using github action.
