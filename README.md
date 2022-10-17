@@ -172,6 +172,7 @@ f. We named our image as 'docker-demo'. We can see this is available in docker h
 g. To validate if the image has been deployed as expected, we can now pull the image in the local system.
 
 - Initially there are no images in my local system:
+- 
  ![image](https://user-images.githubusercontent.com/54409180/196169935-53fad83c-b191-4890-83da-4bbaae3fa44e.png)
  
 - Run 'docker run' command to pull the image and run it:
@@ -180,4 +181,8 @@ docker run -p 80:80 -t jakhmoladp/docker-demo
 ```
 ![image](https://user-images.githubusercontent.com/54409180/196170671-c1678a6c-b84f-4ec8-a31c-c8a618961435.png)
 
-fafas
+![image](https://user-images.githubusercontent.com/54409180/196172840-8ad72423-f7ab-4ede-b821-020101d12af0.png)
+
+
+Thanks,
+Devendra Prasad Jakhmola
