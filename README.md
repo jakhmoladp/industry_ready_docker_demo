@@ -142,9 +142,42 @@ Create a hello world fastapi application. Create a Dockerfile for your fastapi h
 --------------------------------------------------------------------------------------------------------
 ## Assignment 4:
 Automate Assignment below task using github action.
+- Build Docker Image
+- Push Docker Image to Docker hub.
 
-Build Docker Image
-Push Docker Image to Docker hub.
+a. Prepare and run docker image locally.
+b. Store the docker hub username and password as secret by navigating to 'settings--> secrets --> actions --> new repository secrets'.
+![image](https://user-images.githubusercontent.com/54409180/196166104-c1f363cb-ce14-430c-b0b2-326d5f3e6d94.png)
 
-Work in progress
-docker-images3.yml created
+c. Under 'actions' menu, click 'create new workflow' and choose 'Docker Image' as the workflow template. Click 'configure'. 
+![image](https://user-images.githubusercontent.com/54409180/196166653-ddf4b42a-4f8d-441e-b73c-7a049450c4be.png)
+
+d. A new 'YAML' file will appear with default content for auto creation of docker image. Add 2 more steps: 1) Login Docker Hub, 2) Push the image to docker hub.
+Use the previously created docker hub credential variables for DOCKER_USER and DOCKER_PASSWORD. Values will be automatically picked by the github. 
+```
+        DOCKER_USER: ${{secrets.DOCKER_USER}}
+        DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+```
+![image](https://user-images.githubusercontent.com/54409180/196168329-14966dc7-5e21-4e1e-8bf6-173f751fe92b.png)
+
+Once all the changes have been made, click on 'Commit' to commit the changes. 
+
+e. Workflow will auto-trigger and would show all the steps completed after successful completion of the deployment.
+
+![image](https://user-images.githubusercontent.com/54409180/196169016-5f6f6281-d5c0-464a-9aa7-98d75a32db9c.png)
+
+f. We named our image as 'docker-demo'. We can see this is available in docker hub.
+![image](https://user-images.githubusercontent.com/54409180/196169511-200b02dd-7803-48d8-9fd7-cc9592f355f4.png)
+
+g. To validate if the image has been deployed as expected, we can now pull the image in the local system.
+
+- Initially there are no images in my local system:
+ ![image](https://user-images.githubusercontent.com/54409180/196169935-53fad83c-b191-4890-83da-4bbaae3fa44e.png)
+ 
+- Run 'docker run' command to pull the image and run it:
+```
+docker run -p 80:80 -t jakhmoladp/docker-demo
+```
+![image](https://user-images.githubusercontent.com/54409180/196170671-c1678a6c-b84f-4ec8-a31c-c8a618961435.png)
+
+
