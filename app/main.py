@@ -8,4 +8,4 @@ def welcome_page():
 
 @app.get("/{username}")
 def welcome_user(username):
-    return {"message": f'Greetings! {username}'}
+    return {"message": f'Greetings! {username}. Welcome to this Docker Demo!'}
